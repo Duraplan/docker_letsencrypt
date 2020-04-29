@@ -10,16 +10,3 @@ VOLUME /var/lib/letsencrypt
 EXPOSE 80 443
 
 ENTRYPOINT /usr/bin/certbot certonly --standalone 
-# CMD example.com
-## Multi-domain certificate
-CMD -d duraplan.net -d www.duraplan.net -d mail.duraplan.net
-
-## Example: Register a new certificate (full command)
-# ENTRYPOINT []
-# CMD /usr/bin/certbot certonly --standalone -d example.com
-
-## Example: Renew certificates now
-# CMD /usr/bin/certbot renew --no-self-upgrade
-
-## Default: Run this container with auto-renew twice daily
-# CMD /usr/sbin/crond -fd15
