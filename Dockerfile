@@ -9,10 +9,10 @@ VOLUME /var/lib/letsencrypt
 
 EXPOSE 80 443
 
-ENTRYPOINT /usr/bin/certbot certonly --standalone -d
+ENTRYPOINT /usr/bin/certbot certonly --standalone 
 # CMD example.com
 ## Multi-domain certificate
-CMD duraplan.net -d www.duraplan.net mail.duraplan.net
+CMD -d duraplan.net -d www.duraplan.net -d mail.duraplan.net
 
 ## Example: Register a new certificate (full command)
 # ENTRYPOINT []
