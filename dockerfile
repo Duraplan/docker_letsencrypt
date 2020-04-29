@@ -10,7 +10,7 @@ COPY etc/crontab /var/spool/cron/crontabs/certbot-renew
 EXPOSE 80 443
 
 ENTRYPOINT /usr/bin/certbot certonly --standalone -d
-CMD example.com
+# CMD example.com
 ## Multi-domain certificate
 CMD duraplan.net -d www.duraplan.net mail.duraplan.net
 
